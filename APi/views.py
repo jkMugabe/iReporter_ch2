@@ -36,5 +36,18 @@ def create_redflag():
     return jsonify({'redflags': redflag, 'status': 201}), 201
 
 
+@app.route('/api/v1/GET/redflags/<int:redflag_id>', methods=['GET'])
+def get_redflag(redflag_id):
+    redflag = [redflag for redflag in redflags if redflag['id'] == redflag_id]
+    if len(redflag) == 0:
+        # abort(404)
+        return jsonify(
+            {
+                'status': 404,
+                'error': 'Redflag with that ID is not available'
+            }), 404
+    return jsonify({'status': 200, 'data': redflag[0]}), 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
