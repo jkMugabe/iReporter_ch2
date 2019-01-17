@@ -36,6 +36,7 @@ def create_redflag():
     return jsonify({'redflags': redflag, 'status': 201}), 201
 
 
+<<<<<<< HEAD
 @app.route('/api/v1/DELETE/redflags/<int:redflag_id>', methods=['DELETE'])
 def delete_redflag(redflag_id):
     redflag = [redflag for redflag in redflags if redflag['id'] == redflag_id]
@@ -53,6 +54,36 @@ def delete_redflag(redflag_id):
         'data': redfla,
 
     }), 206
+=======
+@app.route('/api/v1/PUT/redflags/<int:redflag_id>/edit_comment', methods=['PUT'])
+def update_comment(redflag_id):
+    redflag = [redflag for redflag in redflags if redflag['id'] == redflag_id]
+    if len(redflag) == 0:
+        return jsonify({'status': 404,
+                        'error': 'No redflag available'}), 404
+
+    if not request.json:
+        return jsonify(
+            {
+                'status': 400,
+                'error': 'Use the required format'
+            }), 400
+
+    if 'comment' in request.json and type(request.json['comment']) is not str:
+        return jsonify(
+            {
+                'status': 400,
+                'error': 'location should be a string'
+            }), 400
+
+    redflag[0]['comment'] = request.json.get('comment', redflag[0]['comment'])
+    redflags.append(redflag[0])
+    return jsonify({
+        'task': redflag[0],
+        'status': 210,
+        'id': redflag[0]['id'],
+        'message': 'Updated red-flag record\'s comment'}), 210
+>>>>>>> cf6033f7c4016f30eee1a00976c26d8cb5c867bb
 
 
 if __name__ == '__main__':
