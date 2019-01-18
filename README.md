@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jkMugabe/iReporter_ch2.svg?branch=develop)](https://travis-ci.com/jkMugabe/iReporter_ch2)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c8eb5db3a8d28b3dc02a/maintainability)](https://codeclimate.com/github/jkMugabe/iReporter_ch2/maintainability) [![Build Status](https://travis-ci.com/jkMugabe/iReporter_ch2.svg?branch=develop)](https://travis-ci.com/jkMugabe/iReporter_ch2)
 [![Coverage Status](https://coveralls.io/repos/github/jkMugabe/iReporter_ch2/badge.svg?branch=develop)](https://coveralls.io/github/jkMugabe/iReporter_ch2?branch=develop)
 ## iReporter Application
 
