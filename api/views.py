@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, abort, request, json
 
 import datetime
-from api.models import RedFlagRecord
+# from api.models import RedFlagRecord
 
 app = Flask(__name__)
 
