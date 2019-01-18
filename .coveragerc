@@ -1,0 +1,3 @@
+[run]
+include=api/views.py, api/models.py
+omit= mary\*, api/__init__.py

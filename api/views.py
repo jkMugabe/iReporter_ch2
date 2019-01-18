@@ -1,12 +1,17 @@
 from flask import Flask, jsonify, abort, request, json
 
 import datetime
-from models import RedFlagRecord, User
+from api.models import RedFlagRecord
 
 app = Flask(__name__)
 
 
 redflags = []
+
+
+@app.route('/')
+def hello():
+    return jsonify({'message': 'Together We Can Make Uganda CORRUPTION FREE', 'status': 200}), 200
 
 
 @app.route('/api/v1/POST/redflags', methods=['POST'])
@@ -58,7 +63,7 @@ def get_redflag(redflag_id):
     return jsonify({'status': 200, 'data': redflag[0]}), 200
 
 
-@app.route('/api/v1/PUT/redflags/<int:redflag_id>/edit_location', methods=['PUT'])
+@app.route('/api/v1/PATCH/redflags/<int:redflag_id>/edit_location', methods=['PATCH'])
 def update_location(redflag_id):
     redflag = [redflag for redflag in redflags if redflag['id'] == redflag_id]
     if len(redflag) == 0:
@@ -87,7 +92,7 @@ def update_location(redflag_id):
         'message': 'Updated red-flag record\'s location'}), 210
 
 
-@app.route('/api/v1/PUT/redflags/<int:redflag_id>/edit_comment', methods=['PUT'])
+@app.route('/api/v1/PATCH/redflags/<int:redflag_id>/edit_comment', methods=['PATCH'])
 def update_comment(redflag_id):
     redflag = [redflag for redflag in redflags if redflag['id'] == redflag_id]
     if len(redflag) == 0:
