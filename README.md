@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/jkMugabe/iReporter_ch2.svg?branch=ft_badges)](https://travis-ci.com/jkMugabe/iReporter_ch2)
-[![Coverage Status](https://coveralls.io/repos/github/jkMugabe/iReporter_ch2/badge.svg?branch=ft_badges)](https://coveralls.io/github/jkMugabe/iReporter_ch2?branch=ft_badges)
+[![Build Status](https://travis-ci.com/jkMugabe/iReporter_ch2.svg?branch=develop)](https://travis-ci.com/jkMugabe/iReporter_ch2)
+[![Coverage Status](https://coveralls.io/repos/github/jkMugabe/iReporter_ch2/badge.svg?branch=develop)](https://coveralls.io/github/jkMugabe/iReporter_ch2?branch=develop)
 ## iReporter Application
 
 Corruption is a huge bane to Africa's development. African countries must develop novel and localised solutions that will curb this menace, hence the birth of iReporter. iReporter enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention for examplebad roads,broken bridges and many others that fallin the same category.
